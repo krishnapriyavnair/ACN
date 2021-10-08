@@ -1,0 +1,122 @@
+exam@debian:~$ mkdir FISAT
+exam@debian:~$ cd FISAT
+exam@debian:~/FISAT$ mkdir day1
+exam@debian:~/FISAT$ cd day1
+exam@debian:~/FISAT/day1$ cat>f1.txt
+this is my first file
+exam@debian:~/FISAT/day1$ cat>f2.txt
+this is my second file
+exam@debian:~/FISAT/day1$ cat>f3.txt
+this is my third file
+exam@debian:~/FISAT/day1$ cd ..
+exam@debian:~/FISAT$ mkdir day2
+exam@debian:~/FISAT$ cd day2
+exam@debian:~/FISAT/day2$ cat>m1.txt
+india is my country
+exam@debian:~/FISAT/day2$ cat>m2.txt
+i love flowers
+exam@debian:~/FISAT/day2$ cd ..
+exam@debian:~/FISAT$ mkdir day3
+exam@debian:~/FISAT$ cd day3
+exam@debian:~/FISAT/day3$ cat>c1.txt
+my favourite colour is black
+exam@debian:~/FISAT/day3$ cat>c2.txt
+girls are pretty
+exam@debian:~/FISAT/day3$ cd ..
+exam@debian:~/FISAT$ 
+
+
+Q4. exam@debian:~$ ps
+    PID TTY          TIME CMD
+    5478 pts/0    00:00:00 bash
+    6144 pts/0    00:00:00 ps
+
+
+Q5. exam@debian:~$ pwd
+    /home/exam
+
+
+Q1. exam@debian:~/FISAT$ cd day2
+    exam@debian:~/FISAT/day2$ cat > m3.txt m1.txt m2.txt
+    exam@debian:~/FISAT/day2$ cat m3.txt
+    india is my country
+    i love flowers
+
+
+Q3. exam@debian:~/FISAT/day1$ chmod +w "f1.txt"
+
+Q2. exam@debian:~/FISAT$ cp ~/FISAT/day2/m3.txt ~/day3/c3.txt
+
+
+SHELL PROGRAM:
+
+echo -e "Menu \n 1.Area of circle \n 2.Area of rectangle \n 3.Area of triangle \n"
+echo "Enter your choice: "
+read ch
+case $ch in
+    1) echo "enter radius: "
+       read r
+       s=`expr $r \* $r`
+       a=`expr $s \* 22`
+       area=`expr $a / 7`
+       echo "area is: $area"
+       ;;
+    2) echo "enter length: "
+       read l
+       echo "enter breadth: "
+       read b
+       area=`expr $l \* $b`
+       echo "area is: $area"
+       ;;
+    3) echo "enter breadth: "
+       read b
+       echo "enter height: "
+       read h
+       s=`expr $b \* $h`
+       area=`expr $s / 2`
+       echo "area is: $area"
+       ;;
+esac
+
+
+Output:-
+
+exam@debian:~$ bash circle.sh
+Menu 
+ 1.Area of circle 
+ 2.Area of rectangle 
+ 3.Area of triangle 
+
+Enter your choice: 
+1
+enter radius: 
+4
+area is: 50
+exam@debian:~$ bash circle.sh
+Menu 
+ 1.Area of circle 
+ 2.Area of rectangle 
+ 3.Area of triangle 
+
+Enter your choice: 
+2
+enter length: 
+3
+enter breadth: 
+4
+area is: 12
+exam@debian:~$ bash circle.sh
+Menu 
+ 1.Area of circle 
+ 2.Area of rectangle 
+ 3.Area of triangle 
+
+Enter your choice: 
+3
+enter breadth: 
+3
+enter height: 
+4
+area is: 6
+
+
